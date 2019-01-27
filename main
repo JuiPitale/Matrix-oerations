@@ -1,0 +1,71 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,j,k,a[3][3],b[3][3],mut[3][3]={0};
+    cout<<"Enter first matrix\n";
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Enter second matrix\n";
+    for(i=0;i<3;i++)
+    {
+    for(j=0;j<3;j++)
+        {
+            cin>>b[i][j];
+        }
+    }
+    cout<<"A=\n";
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cout<<a[i][j]<<"\t";
+        }cout<<"\n";
+    }
+    cout<<"B=\n";
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cout<<b[i][j]<<"\t";
+        }cout<<"\n";
+    }
+    cout<<"sum=\n";
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cout<<a[i][j]+b[i][j]<<"\t";
+        }cout<<"\n";
+    }
+    cout<<"Subtraction=\n";
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cout<<a[i][j]-b[i][j]<<"\t";
+        }cout<<"\n";
+    }
+    cout<<"product=\n";
+    for(i=0;i<3;i++)
+    {for(k=0;k<3;k++)
+        {
+        for(j=0;j<3;j++)
+        {
+            mut[i][k]+=a[i][j]*b[j][k];
+        }}
+    }
+    for(i=0;i<3;i++)
+    {
+        for(k=0;k<3;k++)
+        {
+            cout<<mut[i][k]<<"\t";
+        }cout<<"\n";
+    }
+    return 0;
+}
